@@ -181,6 +181,10 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  
+  /* Add tab index value to all restaurant list items so we can jump to them */
+  more.tabIndex = '3';
+
   li.append(more)
 
   return li
