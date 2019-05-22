@@ -42,7 +42,8 @@
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
+      <!-- Add tab index number 2 -->
+      <h1 tabindex="2" id="restaurant-name"></h1>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
@@ -50,7 +51,10 @@
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section id="reviews-container">
+
+    <!-- Add tab index number 1 -->
+    <!-- Add aria-label of 'tablist' for screen reader a11y -->
+    <section aria-label="Reviews" tabindex="4" id="reviews-container">
       <ul id="reviews-list"></ul>
     </section>
     <!-- End reviews -->
@@ -58,7 +62,9 @@
   <!-- End main -->
 
   <!-- Beginning footer -->
-  <footer aria-label="Footer" tabindex="4" id="footer">
+
+  <!-- Add tab index number 5 -->
+  <footer aria-label="Footer" tabindex="5" id="footer">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->

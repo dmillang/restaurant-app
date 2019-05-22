@@ -229,7 +229,8 @@ nav h1 a {
 }
 .inside #map {
   background-color: #ccc;
-  height: 100%;
+  /* Adjust size of map to show lower options */
+  height: calc(100% - 80px);
   width: 100%;
 }
 .inside #footer {
