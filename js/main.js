@@ -216,3 +216,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+/**
+ * Establish a Service Worker for an Offline-first approach
+ */
+
+ if ('serviceWorker' in navigator) {
+   navigator.serviceWorker
+   .register('/sw.js')
+   .catch(function(err) {
+     console.error(err);
+   });
+ }
