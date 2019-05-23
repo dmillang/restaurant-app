@@ -18,7 +18,7 @@ ul, li {
 	color: #333;
 }
 a {
-	color: #FA821F;
+	color: #ffffff;
   text-decoration: none;
   /* Add delay to style changes between modes */
   transition: all 0.2s ease-in-out;
@@ -59,7 +59,7 @@ nav {
   width: 100%;
   height: 100%;
   padding: 25px 0;
-  background-color: red;
+  background-color: #008080;
   text-align:center;
 }
 nav h1 {
@@ -265,13 +265,14 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 90%;
+  width: 90%;
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
   width: 50%;
+  box-sizing: border-box;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -303,4 +304,67 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* ====================== Media Query -- Small devices ====================== */
+@media only screen and (max-width: 800px) {
+  #restaurant-container, #reviews-container {
+    border-bottom: 1px solid #016868;
+    border-top: 2px solid #016868;
+    background-color: #f6f6f6;
+    width: 100%;
+    /* Make height responsive */
+    align-items: center;
+    /* Add pading above and below the category drop-downs */
+    padding: 10px;
+    box-sizing: border-box;
+    position: static;
+    display: block;
+  }
+
+  .inside #map-container {
+    width: 100%;
+    /* Make height responsive */
+    align-items: center;
+    /* Add pading above and below the category drop-downs */
+    padding: 0;
+    position: static;
+    display: block;
+  }
+
+  .inside #map {
+    background-color: #ccc;
+    /* Adjust size of map to show lower options */
+    height: 500px;
+    width: 100%;
+    position: static;
+    display: block;
+    outline: none;
+  }
+
+  .inside #footer {
+    bottom: 0;
+    position: static;
+    width: 100%;
+  }
+
+  #restaurant-name, #reviews-container h2 {
+    text-align: center;
+  }
+
+  #breadcrumb {
+    padding: 10px 0;
+    list-style: none;
+    background-color: #eee;
+    font-size: 17px;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    height: auto;
+  }
+
+  .leaflet-top, .leaflet-bottom {
+    z-index: 0;
+}
 }
